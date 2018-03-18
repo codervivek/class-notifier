@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block title %}Notifications{% endblock %}
+{% block header_text %}<br><div class="text-center">Notifications</div><hr>{% endblock %}
+
+{% block content %}
+    {% for notification in notification_list %}
+    {% if notification.user.id is user.id %}
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-text a mb-2 text-center">{{ notification.text }}</h5><br>
+            </div>
+            <hr><div class="text-center">
+                <a class="btn btn-primary" href="{% url 'notification_delete' pk=notification.id %}">
+                    I will pay attention
+                </a>
+                  <hr>
+            </div>
+          </div>
+    {% endif %}
+    {% endfor %}
+{% endblock %}
