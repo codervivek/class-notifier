@@ -64,3 +64,11 @@ in the directory which has manage.py to get your site up and running.
 GPL 3.0
 
 ## Description
+
+Use cases implemented till now:
+* Student Register
+* Student login
+* Respond to alert
+
+To view Entity objects check file :- models.py
+To view Controller and Boundary objects check file :- views.py
