@@ -1,5 +1,5 @@
 {% extends "base_generic.html" %}
-
+<!-- Title Definition -->
 {% block title %}Login{% endblock %}
 
 {% block content %}
@@ -11,24 +11,30 @@
 {% endfor %}
 {% endif %}
 <br><br>
+<!-- Card start -->
 <div class="card">
+  <!-- Login field -->
   <div class="card-header"><br>
     <h1 class="text-center">Login</h1>
   </div>
   <div class="card-body">
     <form action="" method="post">
-            {% csrf_token %}
+            {% csrf_token %}  <!-- To maintain security CSRF Token is added. To know more: https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet-->
+            <!-- Starting of for loop to add field tags -->
           <div class="text-center">
           <div class="form-group">
+              <!-- username field -->
               <label for="username">Username</label>
               <input type="text" name="username" class="form-control" id="username">
             </div>
             <div class="form-group">
+              <!-- password field -->
               <label for="exampleInputPassword1">Password</label>
               <input type="password" name="password" class="form-control" id="exampleInputPassword1">
             </div>
           </div>
           <br><hr>
+          <!-- submit button -->
           <div class="text-center">
           <input type="submit" value="Submit" class="btn btn-dark"/></div>
           </div>
@@ -36,5 +42,5 @@
         </div>
       </form>
   </div>
-</div> 
+</div>
 {% endblock %}
