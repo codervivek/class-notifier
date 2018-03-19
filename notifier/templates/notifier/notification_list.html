@@ -1,16 +1,30 @@
+{% comment %} import the base page which is common to all {% endcomment %}
 {% extends "base_generic.html" %}
 
+{% comment %} Title for the page on the header tab {% endcomment %}
 {% block title %}Notifications{% endblock %}
+
+{% comment %} Title which will displayed on main page {% endcomment %}
 {% block header_text %}<br><div class="text-center">Notifications</div><hr>{% endblock %}
 
+{% comment %} Main content on page {% endcomment %}
 {% block content %}
+    {% comment %} loop through all notifications {% endcomment %}
     {% for notification in notification_list %}
+
+    {% comment %} check if the notification is for logged in user {% endcomment %}
     {% if notification.user.id is user.id %}
+        
+        {% comment %} show notification in a card element {% endcomment %}
         <div class="card">
             <div class="card-body">
+
+                {% comment %} get notification from the models and display inside card {% endcomment %}
                 <h5 class="card-text a mb-2 text-center">{{ notification.text }}</h5><br>
             </div>
             <hr><div class="text-center">
+
+                {% comment %} button to respond to a notification {% endcomment %}
                 <a class="btn btn-primary" href="{% url 'notification_delete' pk=notification.id %}">
                     I will pay attention
                 </a>
