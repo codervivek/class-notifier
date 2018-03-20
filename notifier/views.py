@@ -79,7 +79,7 @@ class NotificationListView(generic.ListView):
 from django.contrib.auth.models import User
 
 # view to anaylse state coming from parent system
-def state(request,pk):
+def stateAnalyser(request,pk):
     # pk is id of user whose state has to be analysed
 
     # get state parameter

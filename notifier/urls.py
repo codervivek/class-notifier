@@ -35,7 +35,7 @@ urlpatterns = [
     url(r'^student/update/(?P<pk>\d+)/$', login_required(views.StudentUpdate.as_view()), name='student_update'),
 
     # url to state change will be of format 127.0.0.1:8000/state/<user uuid>
-    url(r'^state/(?P<pk>\d+)$', views.state, name='state'),
+    url(r'^state/(?P<pk>\d+)$', views.stateAnalyser, name='state'),
 
     # url to response of notification will be of format 127.0.0.1:8000/notification/delete/<user uuid>/
     url(r'^notification/delete/(?P<pk>\d+)/$', login_required(views.NotificationDelete.as_view()), name='notification_delete'),
