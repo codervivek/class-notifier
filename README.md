@@ -1,10 +1,38 @@
 # Class Notifier
 
-A multi-platform app which helps to maintain attentiveness while lecture delivery by sending notification to defaulting student and notify teacher about them
+A multi-platform app which helps to maintain attentiveness while lecture delivery by sending notification to defaulting student and notify teacher about them.
 
 ## Getting Started
 
 Clone or fork the repo to make changes and test the site.
+
+## Description
+
+Use cases implemented till now:
+* Student Register
+* Student login
+* Respond to alert
+
+To view Entity objects check file :- notifier/models.py
+
+Models include:
+* Student
+* Notification
+
+To view Controller and check file :- notifier/views.py
+
+Controller include:
+* StateAnalyser
+
+To view Boundary object check directory :- templates
+
+Boundary object include:
+
+* RegisterBoundary
+* LoginBoundary
+* NotificationList
+
+To view Boundary object location :- notifier/urls.py
 
 ### Prerequisites
 
@@ -62,31 +90,3 @@ in the directory which has manage.py to get your site up and running.
 ## License
 
 GPL 3.0
-
-## Description
-
-Use cases implemented till now:
-* Student Register
-* Student login
-* Respond to alert
-
-To view Entity objects check file :- notifier/models.py
-
-Models include:
-* Student
-* Notification
-
-To view Controller and check file :- notifier/views.py
-
-Controller include:
-* StateAnalyser
-
-To view Boundary object check directory :- templates
-
-Boundary object include:
-
-* RegisterBoundary
-* LoginBoundary
-* NotificationList
-
-To view Boundary object location :- notifier/urls.py
